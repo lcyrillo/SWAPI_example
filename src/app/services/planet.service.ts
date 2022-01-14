@@ -5,7 +5,7 @@ import { Planet } from "src/models/planet";
 
 @Injectable({ providedIn: 'root' })
 export class PlanetService {
-    readonly endpoint = 'https://swapi.dev/api/planets/1/';
+    private readonly endpoint = 'https://swapi.dev/api/planets/1/';
     
     constructor(private http: HttpClient) {}
 

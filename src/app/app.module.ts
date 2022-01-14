@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { PlanetComponent } from './components/planet/planet.component';
+import { FilmComponent } from './components/film/film.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlanetComponent
+    PlanetComponent,
+    FilmComponent
   ],
   imports: [
     BrowserModule,

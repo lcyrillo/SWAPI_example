@@ -1,4 +1,3 @@
-import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { PlanetService } from 'src/app/services/planet.service';
 import { Planet } from 'src/models/planet';
@@ -9,15 +8,15 @@ import { Planet } from 'src/models/planet';
   styleUrls: ['./planet.component.scss']
 })
 export class PlanetComponent implements OnInit {
-  private planet!: Planet;
+  public planets!: Planet;
 
   constructor(private planetService: PlanetService ) { }
 
   ngOnInit(): void {
     this.planetService.getAllPlanets()
-     .subscribe((data: Planet) => {
-       this.planet = data;
-       console.log(this.planet);
-     });
+      .subscribe((data: Planet) => {
+        this.planets = data;
+        console.log(this.planets);
+      });
   }
 }
